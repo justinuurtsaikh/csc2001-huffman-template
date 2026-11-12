@@ -1,0 +1,8 @@
+1: november 8, started by reviewing the assignment specifications
+and templates to understand the Huffman coding structure then implemented `comesBefore` and `combine` methods across both the node
+classes. built the `cntFreq` method, searched online for help as well as some of it didnt make sense to me
+2: november 9, built sorted collection helper methods to keep
+ tree nodes organized and created `createHuffTree` and created `createCode` and its recursive helper
+3: november 10, created createHeader` and `parseHeader`, finished writing `huffmanEncode`and also before ending this day
+created `huffmanDecode`, P.S searched online for help and found out about the File class that java provides
+4: november 11, created the tests in `HuffmanTest.java` and reviewed code before submitting in to gradescope

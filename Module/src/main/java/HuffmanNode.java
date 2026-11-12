@@ -11,15 +11,39 @@
  */
 public record HuffmanNode(int charAscii, int freq, HuffmanTree left, HuffmanTree right)
         implements HuffmanTree{
-
+//compares this node with another tree based on freq and ascii value
      public boolean comesBefore(HuffmanTree other) {
         // TODO: implement
+         if(this.freq < other.freq())
+         {
+             return true;
+         }
+         else if(this.freq == other.freq())
+         {
+             if(this.charAscii < other.charAscii())
+             {
+                 return true;
+             }
+         }
         return false;
     }
-
+//combines this node and another tree into a new parent node
     public HuffmanTree combine(HuffmanTree other) {
         // TODO: implement
-        return null;
+        HuffmanTree left;
+        HuffmanTree right;
+        if(this.comesBefore(other))
+        {
+            left = this;
+            right = other;
+        }
+        else{
+            left = other;
+            right = this;
+        }
+        int combinedFreq = this.freq()+ other.freq();
+        int combinedChar = Math.min(this.charAscii(), other.charAscii());
+        return new HuffmanNode(combinedChar, combinedFreq,left,right);
     }
 
     /**

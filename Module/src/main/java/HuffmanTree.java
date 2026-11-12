@@ -2,13 +2,14 @@ public interface HuffmanTree extends Comparable<HuffmanTree> {
     /**
      * Returns true if the tree rooted at node a comes before the tree
      * rooted at node b, false otherwise.
-     *
+     * <p>
      * A node "comes before" another if its frequency count is smaller.
      * Ties are broken using the ASCII value of the character: the node
      * with the smaller ASCII value comes first.
      */
+    int freq();
+    int charAscii();
     public boolean comesBefore(HuffmanTree other);
-
     /**
      * Creates and returns a new internal HuffmanNode with a and b as its
      * two children.
